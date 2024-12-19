@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./App";
 import Application from "./Application/Application";
 import ApplicationPrint from "./ApplicationPrint/ApplicationPrint";
+import Navbar from "./components/Navbar/Navbar";
 import Correction from "./Correction/Correction";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
@@ -12,6 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route index element={<App />} />
         <Route path="correction" element={<Correction />} />
