@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
 import App from "./App";
+import Application from "./Application/Application";
+import ApplicationPrint from "./ApplicationPrint/ApplicationPrint";
 import Correction from "./Correction/Correction";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
@@ -13,8 +15,8 @@ root.render(
       <Routes>
         <Route index element={<App />} />
         <Route path="correction" element={<Correction />} />
-        <Route path="application" element={<App />} />
-        <Route path="application/print" element={<App />} />
+        <Route path="application" element={<Application />} />
+        <Route path="application/print" element={<ApplicationPrint />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
