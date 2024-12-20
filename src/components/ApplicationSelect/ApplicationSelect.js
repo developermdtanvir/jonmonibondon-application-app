@@ -1,8 +1,5 @@
-import { useState } from "react";
-
-const ApplicationSelect = () => {
-  const [selectedValue, setSelectedValue] = useState("জন্মস্থান");
-
+const ApplicationSelect = ({ selectedValue, setSelectedValue }) => {
+  console.log(selectedValue);
   const handleChange = (e) => {
     setSelectedValue(e.target.value);
   };
