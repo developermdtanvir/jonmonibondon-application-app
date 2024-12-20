@@ -1,3 +1,5 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router";
@@ -13,13 +15,15 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route index element={<App />} />
-        <Route path="correction" element={<Correction />} />
-        <Route path="application" element={<Application />} />
-        <Route path="application/print" element={<ApplicationPrint />} />
-      </Routes>
+      <div className="container">
+        <Navbar />
+        <Routes>
+          <Route index element={<App />} />
+          <Route path="correction" element={<Correction />} />
+          <Route path="application" element={<Application />} />
+          <Route path="application/print" element={<ApplicationPrint />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   </React.StrictMode>
 );

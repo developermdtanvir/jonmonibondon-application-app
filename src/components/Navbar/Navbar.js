@@ -1,71 +1,84 @@
 const Navbar = () => {
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-          >
-            <li>
-              <a>হোম</a>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
+          Navbar
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
+                হোম
+              </a>
             </li>
-            <li>
-              <a href="application">জন্ম নিবন্ধন</a>
-              <ul className="p-2">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                জন্ম নিবন্ধন
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                মৃত্যু নিবন্ধন
+              </a>
+              <ul className="dropdown-menu">
                 <li>
-                  <a href="correction">জন্ম নিবন্ধন সংশোধন</a>
+                  <a className="dropdown-item" href="#">
+                    Action
+                  </a>
                 </li>
                 <li>
-                  <a href="birthfind">জন্ম নিবন্ধন তথ্য অনুসন্ধান</a>
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Something else here
+                  </a>
                 </li>
               </ul>
             </li>
-            <li>
-              <a href="">মৃত্যু নিবন্ধন</a>
+            <li className="nav-item">
+              <a className="nav-link disabled" aria-disabled="true">
+                Disabled
+              </a>
             </li>
           </ul>
+          <form className="d-flex" role="search">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button className="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a href="#">হোম</a>
-          </li>
-          <li>
-            <a href="application">জন্ম নিবন্ধন</a>
-            <ul className="p-2">
-              <li>
-                <a href="correction">জন্ম নিবন্ধন সংশোধন</a>
-              </li>
-              <li>
-                <a href="birthfind">জন্ম নিবন্ধন তথ্য অনুসন্ধান</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="">মৃত্যু নিবন্ধন</a>
-          </li>
-        </ul>
-      </div>
-      <div></div>
-    </div>
+    </nav>
   );
 };
 
